@@ -21,6 +21,6 @@ before_script:
   - adb shell input keyevent 82 &
   
  before_install:
-    -echo yes | sdkmanager --licenses
+    -yes | sdkmanager --licenses
 
 script: ./gradlew connectedAndroidTest --stacktrace --scan
