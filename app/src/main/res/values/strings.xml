@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Event_lister</string>
+    <string name="signup">Dont have an account?<b> Sign Up.</b></string>
+    <string name="login">Already have an account?<b> Log in.</b></string>
+    <string name="register">Register</string>
+    <string name="login_type">Choose Login Type</string>
+</resources>

@@ -1,0 +1,35 @@
+{
+  "project_info": {
+    "project_number": "781350595449",
+    "firebase_url": "https://event-lister-83fdc.firebaseio.com",
+    "project_id": "event-lister-83fdc",
+    "storage_bucket": "event-lister-83fdc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:781350595449:android:d1f6925d0b38d324",
+        "android_client_info": {
+          "package_name": "com.example.atishay.event_lister"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7wHhNJDDND6ZSZQDwcgMrVO4PIZAGTrA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "781350595449-6cr2lqi206ji55kp5ppp0i6i9nhdu882.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
