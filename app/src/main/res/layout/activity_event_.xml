@@ -26,7 +26,7 @@
                 android:id="@+id/txttitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Eevnt Title"
+                android:text="Event Title"
                 android:layout_marginTop="10dp"
                 android:textSize="18sp"
                 android:textStyle="bold"/>
@@ -47,6 +47,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Description"/>
+            <EditText
+                android:id="@+id/amountText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:text="100.00"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/paytmButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Make Payment" />
 
 
 

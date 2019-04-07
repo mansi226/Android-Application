@@ -17,12 +17,12 @@ public class LoginPageChapter extends AppCompatActivity {
     String emailPattern = "[a-zA-Z0-9._-]+@stu.upes.ac.in";
     FirebaseAuth firebaseauth;
 
-    public void Signuppage(View view)
+    /*public void Signuppage(View view)
     {
         Intent i=new Intent(this,SignUpActivity.class);
         startActivity(i);;
 
-    }
+    }*/
     public void Mylogin(View view)
     {
         EditText emailtext=(EditText) findViewById(R.id.emailText);

@@ -74,7 +74,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/passwordText" />
 
-    <TextView
+   <!-- <TextView
         android:id="@+id/logintext"
         android:layout_width="0dp"
         android:layout_height="34dp"
@@ -95,4 +95,4 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/registerbutton" />
-</android.support.constraint.ConstraintLayout>
+--></android.support.constraint.ConstraintLayout>

@@ -18,7 +18,7 @@ public class SignUpActivity extends AppCompatActivity {
     FirebaseAuth firebaseauth;
     public void loginpage(View view)
     {
-        Intent intent=new Intent(getApplicationContext(),MainActivity.class);
+        Intent intent=new Intent(getApplicationContext(),Login.class);
         startActivity(intent);
         Toast.makeText(this,"Enter all the fields",Toast.LENGTH_SHORT).show();
 
@@ -43,6 +43,10 @@ public class SignUpActivity extends AppCompatActivity {
             {
                 Toast.makeText(getApplicationContext(),"Enter Valid Email Address",Toast.LENGTH_SHORT).show();
             }
+            else if(phone.getText().toString().length()!=10)
+            {
+                Toast.makeText(getApplicationContext(),"Enter Valid Phone Number",Toast.LENGTH_SHORT).show();
+            }
             else {
 
 
@@ -52,7 +56,7 @@ public class SignUpActivity extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             Toast.makeText(getApplicationContext(), "Correct fields", Toast.LENGTH_SHORT).show();
                             finish();
-                            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                            Intent intent = new Intent(getApplicationContext(), LoginPageStudent.class);
                             startActivity(intent);
                         } else {
                             Toast.makeText(getApplicationContext(), "Invalid fields", Toast.LENGTH_SHORT).show();

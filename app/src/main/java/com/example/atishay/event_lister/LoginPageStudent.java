@@ -25,8 +25,8 @@ public class LoginPageStudent extends AppCompatActivity {
 
     public void Signuppage(View view)
     {
-        Intent i=new Intent(".SignupActivity");
-        startActivity(i);
+        Intent i=new Intent(this,SignUpActivity.class);
+        startActivity(i);;
 
     }
     public void Mylogin(View view)
