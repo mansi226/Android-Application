@@ -1,26 +1,42 @@
-package com.example.atishay.event_lister;
+package com.example.atishay.event_lister.Events_list_student.tabbed_layout;
 
+import android.content.Context;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.widget.Toast;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
+import com.example.atishay.event_lister.Events_list_student.Event_List_Adapter;
+import com.example.atishay.event_lister.Events_list_student.Events;
+import com.example.atishay.event_lister.R;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Event_lister_Activity extends AppCompatActivity {
+public class TabFragment1 extends Fragment{
 
+    RecyclerView recyclerView;
     List<Events> FirstEvent;
     public Event_List_Adapter mAdapter;
+    public static TabFragment1 newInstance() {
+        TabFragment1 fragment = new TabFragment1();
+        return fragment;
+    }
+
+
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.event_lister);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View view=inflater.inflate(R.layout.tab_fragment_1, container, false);
+        recyclerView=view.findViewById(R.id.events_list_tech);
+        setadapter(getContext());
+        return view;
+    }
 
+    public void setadapter(Context context){
         FirstEvent = new ArrayList<>();
         FirstEvent.add(new Events("The Vegitarian","Categorie Book","Description book",R.drawable.tech1));
         FirstEvent.add(new Events("The Wild Robot","Categorie Book","Description book",R.drawable.tech2));
@@ -38,11 +54,8 @@ public class Event_lister_Activity extends AppCompatActivity {
         FirstEvent.add(new Events("The Martian","Categorie Book","Description book",R.drawable.fun2));
         FirstEvent.add(new Events("He Died with...","Categorie Book","Description book",R.drawable.fun1));
 
-        RecyclerView myrv = (RecyclerView) findViewById(R.id.events_list);
-        Event_List_Adapter myAdapter = new Event_List_Adapter(this,FirstEvent );
-        myrv.setLayoutManager(new LinearLayoutManager( this ) );
-        myrv.setAdapter(myAdapter);
+        mAdapter = new Event_List_Adapter(context,FirstEvent );
+        recyclerView.setLayoutManager(new LinearLayoutManager( context ) );
+        recyclerView.setAdapter(mAdapter);
     }
-
-
 }

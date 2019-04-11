@@ -1,10 +1,8 @@
-package com.example.atishay.event_lister;
+package com.example.atishay.event_lister.Events_list_student;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.AppCompatButton;
-import android.support.v7.widget.AppCompatEditText;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -12,12 +10,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.atishay.event_lister.R;
 import com.paytm.pgsdk.PaytmOrder;
 import com.paytm.pgsdk.PaytmPGService;
 import com.paytm.pgsdk.PaytmPaymentTransactionCallback;
-import com.example.atishay.event_lister.Checksum;
-import com.example.atishay.event_lister.Paytm;
-import com.example.atishay.event_lister.WebServiceCaller;
+import com.example.atishay.event_lister.Paytm.Checksum;
+import com.example.atishay.event_lister.Paytm.Paytm;
+import com.example.atishay.event_lister.Paytm.WebServiceCaller;
 
 import java.util.HashMap;
 import java.util.UUID;

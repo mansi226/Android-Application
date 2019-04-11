@@ -1,19 +1,18 @@
-package com.example.atishay.event_lister;
+package com.example.atishay.event_lister.Events_list_student;
 
 import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.RecyclerView.ViewHolder;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.util.ArrayList;
+import com.example.atishay.event_lister.R;
+
 import java.util.List;
 
 public class Event_List_Adapter extends RecyclerView.Adapter<Event_List_Adapter.MyViewHolder> {

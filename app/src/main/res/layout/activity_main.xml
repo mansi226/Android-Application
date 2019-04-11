@@ -4,14 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/f3"
     tools:context=".MainActivity">
 
     <Button
-        android:layout_width="200dp"
-        android:layout_height="80dp"
         android:id="@+id/event_card"
-        android:text="Events"
-        android:layout_centerInParent="true"/>
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/circle"
+        android:textColor="#0b0b0b"
+        android:layout_centerInParent="true"
+        android:text="Events" />
 
 </RelativeLayout>
 

@@ -1,8 +1,7 @@
-package com.example.atishay.event_lister;
+package com.example.atishay.event_lister.Paytm;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.example.atishay.event_lister.Checksum;
 
 import java.util.concurrent.TimeUnit;
 import okhttp3.OkHttpClient;
@@ -34,7 +33,7 @@ public class WebServiceCaller {
                     .create();
 
             Retrofit client = new Retrofit.Builder()
-                    .baseUrl("http://10.0.2.2:81")
+                    .baseUrl("http://35.154.112.184")
                     .client(okclient)
                     .addConverterFactory(GsonConverterFactory.create(gson))
                     .build();

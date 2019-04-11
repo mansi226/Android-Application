@@ -13,7 +13,20 @@
           "package_name": "com.example.atishay.event_lister"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "781350595449-gv47tofgceib6k3l3k57p98mr3cs5uju.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.atishay.event_lister",
+            "certificate_hash": "0d65724115ddc83084d0aedf4f0f75946147c94d"
+          }
+        },
+        {
+          "client_id": "781350595449-6cr2lqi206ji55kp5ppp0i6i9nhdu882.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyC7wHhNJDDND6ZSZQDwcgMrVO4PIZAGTrA"

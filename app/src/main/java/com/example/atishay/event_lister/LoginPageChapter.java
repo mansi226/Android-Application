@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.atishay.event_lister.Events_list_student.Event_lister_Activity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -44,7 +45,7 @@ public class LoginPageChapter extends AppCompatActivity {
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful())
                     {
-                        Intent i =new Intent(getApplicationContext(),Event_lister_Activity.class);
+                        Intent i =new Intent(getApplicationContext(), Event_lister_Activity.class);
                         startActivity(i);
                         Toast.makeText(getApplicationContext(),"Valid Username and Password",Toast.LENGTH_SHORT).show();
                     }

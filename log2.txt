@@ -1,0 +1,11 @@
+* 74f26a5 paytm module added Mon Apr 8 01:46:19 2019 +0530
+* f27482b permission access for travis updated Sun Apr 7 02:43:27 2019 +0530
+* 49eb781 permission access for travis updated Sun Apr 7 02:28:09 2019 +0530
+* 2f1d35d permission access for travis updated Sun Apr 7 02:03:11 2019 +0530
+* eb02c7a permission access for travis updated Sun Apr 7 02:02:06 2019 +0530
+* 0e8c622 permission access for travis updated Sun Apr 7 02:00:31 2019 +0530
+* 283577b permission access for travis updated Sun Apr 7 01:58:30 2019 +0530
+* b1da227 permission access for travis updated Sun Apr 7 01:29:28 2019 +0530
+* a2e32f7 permission access for travis updated Sun Apr 7 01:16:55 2019 +0530
+* 54bc1ed permission access for travis Sat Apr 6 22:36:15 2019 +0530
+* 7c4200e remove folder name eventlister Sat Apr 6 22:22:24 2019 +0530

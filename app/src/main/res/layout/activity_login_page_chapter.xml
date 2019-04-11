@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginPageChapter">
+    tools:context=".LoginPageChapter"
+    android:background="@drawable/f3">
     <ImageView
         android:id="@+id/upeslogo"
         android:layout_width="wrap_content"
@@ -74,7 +75,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/passwordText" />
 
-   <!-- <TextView
+   <TextView
         android:id="@+id/logintext"
         android:layout_width="0dp"
         android:layout_height="34dp"
@@ -95,4 +96,4 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/registerbutton" />
---></android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>

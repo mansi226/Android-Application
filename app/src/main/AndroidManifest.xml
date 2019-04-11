@@ -23,7 +23,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>-->
         </activity>
-        <activity android:name=".Event_lister_Activity" />
+        <activity android:name=".Events_list_student.Event_lister_Activity" />
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,7 +32,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Login" />
-        <activity android:name=".Event_Description" />
+        <activity android:name=".Events_list_student.Event_Description" />
 
     </application>
 

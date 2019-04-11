@@ -1,4 +1,4 @@
-package com.example.atishay.event_lister;
+package com.example.atishay.event_lister.Events_list_student;
 
 
 public class Events {
