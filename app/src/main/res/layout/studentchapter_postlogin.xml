@@ -5,26 +5,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/f3"
-    tools:context=".student_login_success">
+    tools:context=".chapter_login_success">
 
     <ImageButton
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:src="@drawable/logout"
         android:background="@drawable/circle"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
         android:id="@+id/logout"/>
 
     <Button
-        android:id="@+id/event_card"
+        android:id="@+id/event_add"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
         android:background="@drawable/circle"
         android:textColor="#0b0b0b"
         android:layout_centerInParent="true"
-        android:text="Events" />
+        android:text="Add Event" />
 
 </RelativeLayout>
 

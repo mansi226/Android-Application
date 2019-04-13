@@ -1,6 +1,5 @@
 package com.example.atishay.event_lister;
 
-import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -11,7 +10,6 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -54,7 +52,10 @@ public class LoginPageStudent extends AppCompatActivity {
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful())
                     {
-                        Intent intent=new Intent(getApplicationContext(),MainActivity.class);
+                        Config.putSharedPreferences(getApplicationContext(),"pref_detail","user_name",email);
+                        Config.putSharedPreferences(getApplicationContext(),"pref_detail","user_password",password);
+                        Toast.makeText(getApplicationContext(),"Shared Prefresnces set as "+email+" "+password,Toast.LENGTH_SHORT).show();
+                        Intent intent=new Intent(getApplicationContext(), student_login_success.class);
                         startActivity(intent);
                         Toast.makeText(getApplicationContext(),"Valid Username and Password",Toast.LENGTH_SHORT).show();
                     }

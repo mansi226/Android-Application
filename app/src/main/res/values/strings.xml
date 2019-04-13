@@ -4,4 +4,9 @@
     <string name="login">Already have an account?<b> Log in.</b></string>
     <string name="register">Register</string>
     <string name="login_type">Choose Login Type</string>
+    <string-array name="category">
+        <item>Technical</item>
+        <item>Non-Technical</item>
+        <item>Fun</item>
+    </string-array>
 </resources>

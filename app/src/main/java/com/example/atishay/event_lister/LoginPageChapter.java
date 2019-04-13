@@ -45,7 +45,10 @@ public class LoginPageChapter extends AppCompatActivity {
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful())
                     {
-                        Intent i =new Intent(getApplicationContext(), Event_lister_Activity.class);
+                        Config.putSharedPreferences(getApplicationContext(),"pref_detail","user_name",email);
+                        Config.putSharedPreferences(getApplicationContext(),"pref_detail","user_password",password);
+                        Toast.makeText(getApplicationContext(),"Shared Prefresnces set as "+email+" "+password,Toast.LENGTH_SHORT).show();
+                        Intent i =new Intent(getApplicationContext(), chapter_login_success.class);
                         startActivity(i);
                         Toast.makeText(getApplicationContext(),"Valid Username and Password",Toast.LENGTH_SHORT).show();
                     }
