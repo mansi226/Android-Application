@@ -1,4 +1,4 @@
-package com.example.atishay.event_lister;
+package com.example.atishay.event_lister.Chapter;
 
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
@@ -10,6 +10,7 @@ import android.net.Uri;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.EventLog;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -19,22 +20,33 @@ import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TimePicker;
 
+import com.example.atishay.event_lister.Events;
+import com.example.atishay.event_lister.Events_db;
+import com.example.atishay.event_lister.R;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.ArrayList;
 import java.util.Calendar;
 
 public class EventRegister extends AppCompatActivity {
     private static int RESULT_LOAD_IMAGE = 1;
     private ImageView imageView;
     private int mYear,mMonth,mDay,mHour,mMinute;
-    EditText Event_Dat,Event_Tim;
+    EditText Event_Dat,Event_Tim,Event_nam;
     EditText End_Dat,End_Tim;
     Button Upload;
     String picturePath;
+    DatabaseReference databaseReference;
+    ArrayList<Events_db> events_list;
+    String event_id;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.event_info_chapter);
+        databaseReference= FirebaseDatabase.getInstance().getReference("Events");
         imageView = (ImageView) findViewById(R.id.event_img);
         Upload=(Button)findViewById(R.id.event_img_button);
         selectImage(imageView,Upload);
@@ -44,6 +56,7 @@ public class EventRegister extends AppCompatActivity {
         Event_Tim=(EditText)findViewById(R.id.event_time);
         End_Dat=(EditText)findViewById(R.id.end_date);
         End_Tim=(EditText)findViewById(R.id.end_time);
+        Event_nam=findViewById(R.id.event_name);
         Button EventDateSelect=(Button) findViewById(R.id.date_selector);
         Button EventTimeSelect=(Button) findViewById(R.id.time_selector);
         Button EndDateSelect=(Button)findViewById(R.id.end_date_selector);
@@ -52,7 +65,7 @@ public class EventRegister extends AppCompatActivity {
         selectEventTime(EventTimeSelect);
         selectEventEndDate(EndDateSelect);
         selectEventEndTime(EndTimeSelect);
-
+        events_list=new ArrayList<Events_db>();
     }
 
     public void EventDetailsChapter(Button btn) {
@@ -66,6 +79,7 @@ public class EventRegister extends AppCompatActivity {
                 EditText End_Dat=(EditText)findViewById(R.id.end_date);
                 EditText End_Tim=(EditText)findViewById(R.id.end_time);
                 Spinner CategorySelect = (Spinner) findViewById(R.id.category_dropdown);
+                String Event_name=Event_nam.getText().toString();
                 String Event_Category = CategorySelect.getSelectedItem().toString();
                 String Event_Description=Event_Descriptio.getText().toString();
                 String Event_Date=Event_Dat.getText().toString();
@@ -73,11 +87,11 @@ public class EventRegister extends AppCompatActivity {
                 int Max_Registration=Integer.parseInt(Max_registratio.getText().toString());
                 String End_Date=End_Dat.getText().toString();
                 String End_Time=End_Tim.getText().toString();
-                Log.i(Event_Category,"My Category");
-                Log.i(Event_Description,"Des");
 
 
-
+                event_id=databaseReference.push().getKey();
+                Events_db events_db=new Events_db("CSI",Event_name,Event_Category,Event_Description,Event_Date, Event_Time,Max_Registration,End_Date,End_Time,picturePath,event_id);
+                databaseReference.child(event_id).setValue(events_db);
             }
         });
     }
@@ -191,7 +205,7 @@ public class EventRegister extends AppCompatActivity {
             cursor.moveToFirst();
 
             int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
-            String picturePath = cursor.getString(columnIndex);
+            picturePath = cursor.getString(columnIndex);
             cursor.close();
 
             // String picturePath contains the path of selected Image

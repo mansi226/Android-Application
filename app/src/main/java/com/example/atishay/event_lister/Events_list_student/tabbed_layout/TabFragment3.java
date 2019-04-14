@@ -10,7 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.atishay.event_lister.Events_list_student.Event_List_Adapter;
-import com.example.atishay.event_lister.Events_list_student.Events;
+import com.example.atishay.event_lister.Events;
 import com.example.atishay.event_lister.R;
 
 import java.util.ArrayList;

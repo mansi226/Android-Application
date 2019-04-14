@@ -13,10 +13,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SignUpActivity"></activity>
-        <activity android:name=".LoginPageStudent" />
-        <activity android:name=".LoginPageChapter" />
-        <activity android:name=".student_login_success">
+        <activity android:name=".Student.SignUpActivity"></activity>
+        <activity android:name=".Student.LoginPageStudent" />
+        <activity android:name=".Chapter.LoginPageChapter" />
+        <activity android:name=".Student.student_login_success">
             <!--<intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -33,9 +33,10 @@
         </activity>
         <activity android:name=".Login" />
         <activity android:name=".Events_list_student.Event_Description" />
-        <activity android:name=".chapter_login_success" />
-        <activity android:name=".EventRegister" />
-        <activity android:name=".SignUpChapterActivity" />
+        <activity android:name=".Chapter.chapter_login_success" />
+        <activity android:name=".Chapter.EventRegister" />
+        <activity android:name=".Chapter.SignUpChapterActivity" />
+        <activity android:name=".Chapter.check_db_chapter" />
 
     </application>
 

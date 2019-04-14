@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginPageStudent"
+    tools:context=".Student.LoginPageStudent"
     android:background="@drawable/f3"
     >
     <ImageView
@@ -67,7 +67,6 @@
         android:layout_marginBottom="70dp"
         android:alpha=".5"
         android:background="@android:color/holo_blue_dark"
-        android:onClick="Mylogin"
         android:text="Log In"
         android:textAppearance="@style/TextAppearance.AppCompat.Button"
         app:layout_constraintBottom_toTopOf="@+id/logintext"

@@ -1,4 +1,4 @@
-package com.example.atishay.event_lister;
+package com.example.atishay.event_lister.Student;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -8,22 +8,27 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.atishay.event_lister.Events_list_student.Event_lister_Activity;
+import com.example.atishay.event_lister.Config;
+import com.example.atishay.event_lister.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class LoginPageChapter extends AppCompatActivity {
+public class LoginPageStudent extends AppCompatActivity {
     String emailPattern = "[a-zA-Z0-9._-]+@stu.upes.ac.in";
     FirebaseAuth firebaseauth;
+    String email;
+    String password;
 
-    /*public void Signuppage(View view)
+    Task<AuthResult> task;
+
+    public void Signuppage(View view)
     {
         Intent i=new Intent(this,SignUpActivity.class);
         startActivity(i);;
 
-    }*/
+    }
     public void Mylogin(View view)
     {
         EditText emailtext=(EditText) findViewById(R.id.emailText);
@@ -31,10 +36,14 @@ public class LoginPageChapter extends AppCompatActivity {
         Boolean valid=false;
         String email=emailtext.getText().toString();
         String password=passwordtext.getText().toString();
+        firebase_auth(email,password);
+    }
+
+    public void firebase_auth(String email,String password){
         firebaseauth=FirebaseAuth.getInstance();
 
 
-        if(emailtext.getText().toString().equals("")||passwordtext.getText().toString().equals("")||!(emailtext.getText().toString().matches(emailPattern)))
+        if(email.equals("")||password.equals("")||!(email.matches(emailPattern)))
         {
             Toast.makeText(this,"Enter valid Username and Password",Toast.LENGTH_SHORT).show();
         }
@@ -48,8 +57,8 @@ public class LoginPageChapter extends AppCompatActivity {
                         Config.putSharedPreferences(getApplicationContext(),"pref_detail","user_name",email);
                         Config.putSharedPreferences(getApplicationContext(),"pref_detail","user_password",password);
                         Toast.makeText(getApplicationContext(),"Shared Prefresnces set as "+email+" "+password,Toast.LENGTH_SHORT).show();
-                        Intent i =new Intent(getApplicationContext(), chapter_login_success.class);
-                        startActivity(i);
+                        Intent intent=new Intent(getApplicationContext(), student_login_success.class);
+                        startActivity(intent);
                         Toast.makeText(getApplicationContext(),"Valid Username and Password",Toast.LENGTH_SHORT).show();
                     }
                     else
@@ -60,11 +69,10 @@ public class LoginPageChapter extends AppCompatActivity {
             });
 
         }
-
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login_page_chapter);
+        setContentView(R.layout.activity_login_page_student);
     }
 }

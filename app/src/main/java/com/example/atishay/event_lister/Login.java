@@ -12,12 +12,14 @@ import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.Toast;
+
+import com.example.atishay.event_lister.Chapter.LoginPageChapter;
+import com.example.atishay.event_lister.Student.LoginPageStudent;
 
 import java.util.ArrayList;
 import java.util.List;

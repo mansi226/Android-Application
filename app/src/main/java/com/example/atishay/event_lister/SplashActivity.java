@@ -12,7 +12,10 @@ import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.Toast;
+
+import com.example.atishay.event_lister.Chapter.chapter_entry_in_db;
+import com.example.atishay.event_lister.Chapter.chapter_login_success;
+import com.example.atishay.event_lister.Student.student_login_success;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -58,6 +61,13 @@ public class SplashActivity extends AppCompatActivity {
                 finish();
             }
         }, SPLASH_TIME);
+
+        //to add student chapter database only remove from comment when student chapter to be added else dont
+        chapter_entry_in_db chapter_entry_in_db=new chapter_entry_in_db();
+        chapter_entry_in_db.add_chapter("CSI","CSI_UPES","123456");
+        chapter_entry_in_db.add_chapter("ACM","ACM_UPES","123456");
+        chapter_entry_in_db.add_chapter("MTC","MTC_UPES","123456");
+        chapter_entry_in_db.add_chapter("IC","IC_UPES","123456");
     }
     @RequiresApi(api = Build.VERSION_CODES.M)
     private boolean arePermissionsEnabled() {

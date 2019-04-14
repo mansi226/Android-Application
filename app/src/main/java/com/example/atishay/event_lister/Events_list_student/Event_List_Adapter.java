@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.atishay.event_lister.Events;
 import com.example.atishay.event_lister.R;
 
 import java.util.List;

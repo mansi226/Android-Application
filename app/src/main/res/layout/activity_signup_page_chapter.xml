@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:background="@drawable/f3"
     android:layout_height="match_parent"
-    tools:context=".SignUpChapterActivity">
+    tools:context=".Chapter.SignUpChapterActivity">
 
     <ImageView
         android:id="@+id/upeslogo"

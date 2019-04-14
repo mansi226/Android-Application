@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/f3"
-    tools:context=".student_login_success">
+    tools:context=".Student.student_login_success">
 
     <ImageButton
         android:layout_width="50dp"

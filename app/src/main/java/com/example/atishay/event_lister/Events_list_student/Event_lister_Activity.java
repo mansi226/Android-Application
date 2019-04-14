@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 import android.support.design.widget.TabLayout;
 
+import com.example.atishay.event_lister.Events;
 import com.example.atishay.event_lister.Events_list_student.tabbed_layout.PageAdapter;
 import com.example.atishay.event_lister.R;
 

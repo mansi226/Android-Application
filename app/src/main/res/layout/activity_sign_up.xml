@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/f3"
-    tools:context=".SignUpActivity">
+    tools:context=".Student.SignUpActivity">
     <ImageView
         android:id="@+id/upeslogo"
         android:layout_width="wrap_content"
