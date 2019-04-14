@@ -54,27 +54,6 @@ public class Event_lister_Activity extends AppCompatActivity {
             }
         });
 
-        FirstEvent = new ArrayList<>();
-        FirstEvent.add(new Events("The Vegitarian","Categorie Book","Description book",R.drawable.tech1));
-        FirstEvent.add(new Events("The Wild Robot","Categorie Book","Description book",R.drawable.tech2));
-        FirstEvent.add(new Events("Maria Semples","Categorie Book","Description book",R.drawable.fun1));
-        FirstEvent.add(new Events("The Martian","Categorie Book","Description book",R.drawable.fun2));
-        FirstEvent.add(new Events("He Died with...","Categorie Book","Description book",R.drawable.fun4));
-        FirstEvent.add(new Events("The Vegitarian","Categorie Book","Description book",R.drawable.tech2));
-        FirstEvent.add(new Events("The Wild Robot","Categorie Book","Description book",R.drawable.tech3));
-        FirstEvent.add(new Events("Maria Semples","Categorie Book","Description book",R.drawable.tech2));
-        FirstEvent.add(new Events("The Martian","Categorie Book","Description book",R.drawable.tech4));
-        FirstEvent.add(new Events("He Died with...","Categorie Book","Description book",R.drawable.tech1));
-        FirstEvent.add(new Events("The Vegitarian","Categorie Book","Description book",R.drawable.tech4));
-        FirstEvent.add(new Events("The Wild Robot","Categorie Book","Description book",R.drawable.fun4));
-        FirstEvent.add(new Events("Maria Semples","Categorie Book","Description book",R.drawable.fun1));
-        FirstEvent.add(new Events("The Martian","Categorie Book","Description book",R.drawable.fun2));
-        FirstEvent.add(new Events("He Died with...","Categorie Book","Description book",R.drawable.fun1));
-
-        RecyclerView myrv = (RecyclerView) findViewById(R.id.events_list);
-        Event_List_Adapter myAdapter = new Event_List_Adapter(this,FirstEvent );
-        myrv.setLayoutManager(new LinearLayoutManager( this ) );
-        myrv.setAdapter(myAdapter);
     }
 
 

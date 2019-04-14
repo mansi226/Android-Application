@@ -20,6 +20,7 @@ import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TimePicker;
 
+import com.example.atishay.event_lister.Config;
 import com.example.atishay.event_lister.Events;
 import com.example.atishay.event_lister.Events_db;
 import com.example.atishay.event_lister.R;
@@ -87,10 +88,11 @@ public class EventRegister extends AppCompatActivity {
                 int Max_Registration=Integer.parseInt(Max_registratio.getText().toString());
                 String End_Date=End_Dat.getText().toString();
                 String End_Time=End_Tim.getText().toString();
+                String chapter_name = Config.getSharedPreferences(getApplicationContext(), "pref_detail", "chapter_name", "");
 
 
                 event_id=databaseReference.push().getKey();
-                Events_db events_db=new Events_db("CSI",Event_name,Event_Category,Event_Description,Event_Date, Event_Time,Max_Registration,End_Date,End_Time,picturePath,event_id);
+                Events_db events_db=new Events_db(chapter_name,Event_name,Event_Category,Event_Description,Event_Date, Event_Time,Max_Registration,End_Date,End_Time,picturePath,event_id);
                 databaseReference.child(event_id).setValue(events_db);
             }
         });

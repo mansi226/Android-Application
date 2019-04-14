@@ -75,6 +75,7 @@ public class LoginPageChapter extends AppCompatActivity {
                             x=1;
                             Config.putSharedPreferences(getApplicationContext(), "pref_detail", "user_name", email);
                             Config.putSharedPreferences(getApplicationContext(), "pref_detail", "user_password", password);
+                            Config.putSharedPreferences(getApplicationContext(),"pref_detail","chapter_name",chapter_entry_in_db.getChapter_name());
                             Toast.makeText(getApplicationContext(), "Shared Prefresnces set as " + email + " " + password, Toast.LENGTH_SHORT).show();
                             Intent i = new Intent(getApplicationContext(), chapter_login_success.class);
                             startActivity(i);
